@@ -4,6 +4,8 @@ import fs from "fs";
 
 export const app = express();
 
+const PORT = process.env.PORT || 3000; 
+
 app.use(
   cors({
     origin: true,
@@ -15,15 +17,15 @@ app.use(
 
 app.use(express.static("frontend"));
 
-app.listen(7778, () => {
-  console.log("Server is running on port 7778");
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
 });
 
 app.get("/images", (req, res) => {
   fs.readdir(`./frontend/images`, (err, files) => {
     if (err) {
       console.log(err);
-      return res.end();
+      return res.status(500).send("Error reading images directory");
     }
 
     res.send(files);
