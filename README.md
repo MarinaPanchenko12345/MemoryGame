@@ -4,7 +4,7 @@ This is a two-player memory game built using HTML, CSS, and JavaScript for the f
 
 ## 🔗 Live Demo
 
-You can play the game online here: [Memory Game on Render](https://memorygame-itil.onrender.com/)
+You can play the game online here: https://memorygame-production-134d.up.railway.app/
 
 # Table of Contents
 
